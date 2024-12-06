@@ -5,11 +5,17 @@ document.getElementById('countDisplay').innerHTML=count; // Display the count in
 }
 
 function checkCountValue() {
-  if (count === 10) {
+    if (count === 10) {
     alert("Your Instagram post gained 10 followers! Congratulations!");
   } else if (count === 20) {
     alert("Your Instagram post gained 20 followers! Keep it up!");
   }
+}
+
+function displayCountReset(){
+    if (count === 0){
+        alert("Your counter was reset!");
+}
 }
 
 function increaseCount() {
@@ -17,3 +23,10 @@ function increaseCount() {
   displayCount();
 checkCountValue();
 }
+
+function resetCount() {
+    count = 0; // Reset count to 0
+    displayCountReset();
+    displayCount();
+    }
+  
