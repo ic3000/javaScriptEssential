@@ -23,9 +23,11 @@ let books = [];
                 <p><strong>Book Name: </strong>${book.name}</p>
                 <p><strong>Author Name:</strong> ${book.authorName}</p>
                 <p><strong>Book Description:</strong> ${book.bookDescription}</p>
-                <p><strong>No. of Pages:</strong> ${book.pagesNumber} page(s)</p>`
+                <p><strong>No. of Pages:</strong> ${book.pagesNumber} page(s)</p>
+                <button id="${index}" onclick="deletebook(this.id)">Delete book ${index+1}</button>`
             );
             document.getElementById('books').innerHTML = booksDiv.join('');
+          
             }
         function clearInputs() {
             document.getElementById('bookName').value = '';
@@ -33,6 +35,12 @@ let books = [];
             document.getElementById('bookDescription').value = '';
             document.getElementById('pagesNumber').value = '';
  }
- function deletebook() {
-    
+function deletebook(ind) {
+    //let btnI = document.getElementById("btn0");
+    //ind = btnI.value;
+    //console.log(ind);
+    alert("inside!!!");
+    console.log(ind);
+    books.splice(ind, 1);
+    showbooks();
  }
