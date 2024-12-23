@@ -36,11 +36,6 @@ let books = [];
             document.getElementById('pagesNumber').value = '';
  }
 function deletebook(ind) {
-    //let btnI = document.getElementById("btn0");
-    //ind = btnI.value;
-    //console.log(ind);
-    alert("inside!!!");
-    console.log(ind);
     books.splice(ind, 1);
     showbooks();
  }
