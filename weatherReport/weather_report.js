@@ -27,8 +27,11 @@ function showweatherDetails(event) {
                                   <p>Temperature: ${data.main.temp} &#8451;</p>
                                   <p>Weather: ${data.weather[0].description}</p>`;
         })
-
-
+        .catch(error => {
+            console.error('Error fetching weather:', error);
+            const weatherInfo = document.getElementById('weatherInfo');
+            weatherInfo.innerHTML = `<p>Failed to fetch weather. Please try again.</p>`;
+        });
 }
 
 /*
