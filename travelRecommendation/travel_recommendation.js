@@ -1,6 +1,6 @@
 const report = document.getElementById("report");
 const btnSearch = document.getElementById('btnSearch');
-const patients = [];
+const clearAllBtn = document.getElementById("clearAllBtn");
 
 
 function searchCondition() {
@@ -13,8 +13,15 @@ function searchCondition() {
 
         .then(data => {
             const country = data.countries.find(item => item.name.toLowerCase() === input);
-            const temple = data.temples.find(item => 'temple' === input);
-            const beach = data.beaches.find(item => 'beach' === input);
+
+            //array of words for temple search
+            const templeArray = ["temple", "temples"];
+            const temple = templeArray.some(word => word.toLowerCase() === input.toLowerCase());
+                       
+    
+            //array of words for beach search
+            const beachArray = ["beach", "beaches"];
+            const beach = beachArray.some(word => word.toLowerCase() === input.toLowerCase());
 
             //search for country
             if (country) {
@@ -58,4 +65,10 @@ function searchCondition() {
 }
 btnSearch.addEventListener('click', searchCondition);
 
-f
+function clearAllTasks() {
+    const resultDiv = document.getElementById('result');
+    resultDiv.innerHTML = '';
+    input = '';
+
+}
+clearAllBtn.addEventListener("click", clearAllTasks);
