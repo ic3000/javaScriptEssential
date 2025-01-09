@@ -7,11 +7,18 @@
     <style>
         body {
             text-align: center;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: white;
         }
         /* Some basic styling for demonstration purposes */
         #contactForm {
             max-width: 400px;
             margin: 0 auto;
+            font: bold;
+            font-family: Arial, sans-serif;
+            font-size: 32px;
+            color: greenyellow;
         }
 
             #contactForm input,
@@ -34,18 +41,18 @@
                 }
     </style>
 </head>
-<body>
+<body style="background-image: url('img/about.jpg'); background-size: 100%; background-repeat:no-repeat">
     <nav>
-        <h1>Bloom Travel Recommendation</h1>
+        <h1>IC Travel Recommendation</h1>
         <ul>
             <li><a href="./index.html" id="home">Home </a></li>
-            <li><a href="./health_contact.html" id="contact">Contact Us </a></li>
+            <li><a href="./travel_about.html" id="contact">About Us </a></li>
             </li>
 
         </ul>
     </nav>
     <h1>Contact Us</h1>
-    <p>Feel free to contact us to know more about your conditions and for treatment methods.</p>
+    <h1>Get in touch.</h1>
 
     <form id="contactForm">
         <div>
@@ -55,10 +62,6 @@
         <div>
             <label for="email">Email</label>
             <input type="email" id="email" name="email" required>
-        </div>
-        <div>
-            <label for="condition">Condition</label>
-            <input type="text" id="condition" name="condition" required>
         </div>
         <div>
             <label for="message">Message</label>

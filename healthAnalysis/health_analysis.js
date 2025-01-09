@@ -85,7 +85,8 @@ function searchCondition() {
                 resultDiv.innerHTML += `<p><strong>Symptoms:</strong> ${symptoms}</p>`;
                 resultDiv.innerHTML += `<p><strong>Prevention:</strong> ${prevention}</p>`;
                 resultDiv.innerHTML += `<p><strong>Treatment:</strong> ${treatment}</p>`;
-            } else {
+            }
+            else {
                 resultDiv.innerHTML = 'Condition not found.';
             }
         })

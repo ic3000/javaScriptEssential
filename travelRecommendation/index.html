@@ -5,13 +5,14 @@
     <title>Travel Recommendation</title>
     <link rel="stylesheet" href="./travel_recommendation.css">
 </head>
-<body>
+<body style="background-image: url('img/about.jpg'); background-size: 100%; background-repeat:no-repeat">
     <nav>
-        <h1>Bloom Travel Recommendation</h1>
+        <h1>IC Travel Recommendation</h1>
         <ul>
             <li><a href="./index.html" id="home">Home </a></li>
             <li><a href="./travel_contact.html" id="contact">Contact Us </a></li>
-            <li><input type="text" id="conditionInput" placeholder="Enter a health condition">  </li>
+            <li><a href="./travel_about.html" id="about">About Us </a></li>
+            <li><input type="text" id="destinationInput" placeholder="Enter a destination or keyword">  </li>
             <li>
                 <button id='btnSearch'>Search</button>
             </li>
@@ -19,40 +20,47 @@
         </ul>
     </nav>
     <div class="container">
-        <div class="analysisForm">
-            <h1>Healthcare Data Analysis</h1>
+        <div class="Common">
+            <h1>EXPLORE DREAM DESTINATION</h1>
             <div>
-                <label for="name">Name:</label>
-                <input type="text" id="name">
+                <h3>
+                    It encourages exploration of unfamiliar territories,
+                    empracing diverse cultures and landscapes, while pursuing the desired
+                    destination that captivates the heart and ignites a sense of wonder.
+                </h3>
             </div>
-            <div>
-                <label>Gender:</label>
-                <label for="male">Male</label>
-                <input type="radio" name="gender" id="male" value="Male">
-                <label for="female">Female</label>
-                <input type="radio" name="gender" id="female" value="Female">
-            </div>
-            <div>
-                <label for="age">Age:</label>
-                <input type="number" id="age">
-            </div>
-            <div>
-                <label for="condition">Condition:</label>
-                <select id="condition">
-                    <option value="">Select condition</option>
-                    <option value="Diabetes">Diabetes</option>
-                    <option value="Thyroid">Thyroid</option>
-                    <option value="High Blood Pressure">High Blood Pressure</option>
-                </select>
-            </div>
-            <button id="addPatient">Add Patient</button>
-            <h2>Analysis Report</h2>
-            <div id="report"></div>
+            <button id="bookNow">BOOK NOW</button>
+           
         </div>
+        
+    </div>
+    <div class="result">
+        <h2>Travel Recommendation</h2>
         <div class="searchCondition">
             <div id="result"></div>
         </div>
     </div>
-    <script src="./health_analysis.js"></script>
+   
+    <!--another div for testing-->
+
+
+    <!--<header>
+        <code>&#60;header&#62;</code>
+    </header>
+
+    <section>
+        <code>&#60;section&#62; <br> float: left;</code>
+    </section>
+
+    <aside>
+        <code>&#60;aside&#62; <br> float: right;</code>
+    </aside>
+
+    <footer>
+        <code>&#60;footer&#62; <br> clear: both;</code>
+    </footer>-->
+
+
+    <script src="./travel_recommendation.js"></script>
 </body>
 </html>

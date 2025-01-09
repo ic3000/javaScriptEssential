@@ -2,15 +2,15 @@
 
 * {
     margin: 0;
-    padding: 0;
+    padding: 20;
     box-sizing: border-box;
 }
 
 nav {
-    background-color: #f0f0f0;
-    padding: 20px;
+    background-color: #808080;
+    padding: 15px;
     display: flex;
-    align-items: center;
+    align-items: normal;
     justify-content: space-between;
 }
 
@@ -26,13 +26,14 @@ nav {
 
     nav a {
         text-decoration: none;
-        color: #333;
+        color: white;
         font-weight: bold;
     }
 
 /* Basic CSS for the form elements */
 body {
     font-family: Arial, sans-serif;
+    color: white;
     /* margin: 20px; */
 }
 
@@ -58,37 +59,82 @@ select {
 
 button {
     padding: 7px 15px;
-    background-color: #4CAF50;
+    background-color: #0094ff;
     color: white;
     border: none;
     cursor: pointer;
 }
 
     button:hover {
-        background-color: #45a049;
+        background-color: #262fc8;
     }
 
 /* Basic CSS for the report section */
 h2 {
     margin-top: 30px;
+   /* float: right;
+    width: 30%;*/
 }
 
 #report, #result {
     padding: 10px;
     max-width: 400px;
     word-wrap: break-word;
+    /*float: right;
+    width: 30%;*/
 }
 
 #result {
     height: 400px;
     width: 500px;
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: space-around;
     flex-direction: column;
 }
 
     #result img {
         width: 200px;
-        height: 100px;
+        height: 100 px;
     }
+
+h3 {
+    margin-top: 30px;
+    max-width: 500px;
+    word-wrap: break-word;
+}
+
+
+/*add on*/
+
+/*code {
+    background: #2db34a;
+    border-radius: 6px;
+    color: #fff;
+    display: block;
+    font: 14px/24px "Source Code Pro", Inconsolata, "Lucida Console", Terminal, "Courier New", Courier;
+    padding: 24px 15px;
+    text-align: center;
+}
+
+header,
+section,
+aside,
+footer {
+    margin: 0 1.5% 24px 1.5%;
+}
+
+section {
+    float: left;
+    width: 63%;
+}
+
+aside {
+    float: right;
+    width: 30%;
+}
+
+footer {
+    clear: both;
+    margin-bottom: 0;
+}*/
