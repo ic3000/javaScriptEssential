@@ -8,14 +8,13 @@ function searchCondition() {
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = '';
 
-    fetch('travel_recommendation_api.json')
+    fetch('./travel_recommendation_api.json')
         .then(response => response.json())
 
         .then(data => {
             const country = data.countries.find(item => item.name.toLowerCase() === input);
-            console.log(country);
-            const temple = data.temples.find('temple' === input);
-            const beach = data.beaches.find(item => item.name.toLowerCase() === input);
+            const temple = data.temples.find(item => 'temple' === input);
+            const beach = data.beaches.find(item => 'beach' === input);
 
             //search for country
             if (country) {
@@ -29,13 +28,21 @@ function searchCondition() {
 
             //search for temple
             else if (temple) {
-                console.log(data.temples.length);
-                console.log(data.temples[0]);
-                console.log(data.temples[1]);
-                for (let i = 0; i <= temple.temples.length - 1; i++) {
-                    resultDiv.innerHTML += `<h2>${temples[i].name}</h2>`;
-                    resultDiv.innerHTML += `<img src="${temples[i].imageUrl}" alt="hjh">`;
-                    resultDiv.innerHTML += `<p><strong>Description:</strong> ${temples[i].description}</p>`;
+              console.log(data.temples.length);              
+                for (let j = 0; j <= data.temples.length - 1; j++) {
+                   resultDiv.innerHTML += `<h2>${data.temples[j].name}</h2>`;
+                   resultDiv.innerHTML += `<img src="${data.temples[j].imageUrl}" alt="hjh">`;
+                   resultDiv.innerHTML += `<p><strong>Description:</strong> ${data.temples[j].description}</p>`;
+                }
+            }
+
+            //search for beach
+            else if (beach) {
+                console.log(data.beaches.length);
+                for (let z = 0; z <= data.beaches.length - 1; z++) {
+                    resultDiv.innerHTML += `<h2>${data.beaches[z].name}</h2>`;
+                    resultDiv.innerHTML += `<img src="${data.beaches[z].imageUrl}" alt="hjh">`;
+                    resultDiv.innerHTML += `<p><strong>Description:</strong> ${data.beaches[z].description}</p>`;
                 }
             }
 
@@ -50,4 +57,5 @@ function searchCondition() {
         });
 }
 btnSearch.addEventListener('click', searchCondition);
-//console.log("Pressed button!");
+
+f
